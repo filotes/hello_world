@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .windows{
+            position: relative;
+            border: 3px rgb(255, 188, 44) solid;
+            width: 700px;
+            height: 400px;
+            background-color: rgb(250, 186, 186);
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .leftbtn{
+            z-index: 999;
+             position: absolute;
+             box-sizing: border-box;
+             top: 195px;
+             left: 0;
+             width: 50px;
+             height: 70px;
+             background-color: rgba(136, 135, 135, 0.582);
+             line-height: 70px;
+             text-align: center;
+             font-size: 35px;
+             color: rgba(255, 255, 255, 0.609);
+             cursor: pointer;
+             display: none;
+        }
+        .leftbtn:hover{
+            background-color: rgba(189, 186, 186, 0.623);
+            color: aliceblue;
+        }
+        .rightbtn{
+            z-index: 999;
+             position: absolute;
+             box-sizing: border-box;
+             top: 195px;
+             right: 0;
+             width: 50px;
+             height: 70px;
+             background-color: rgba(136, 135, 135, 0.609);
+             line-height: 70px;
+             text-align: center;
+             font-size: 35px;
+             color: rgba(255, 255, 255, 0.596);
+             cursor: pointer;
+             display: none;
+        }
+        .rightbtn:hover{
+            background-color: rgba(80, 252, 186, 0.623);
+            color: aliceblue;
+        }
+        .imgbox{
+           position:absolute;
+           left: 0;
+           top: 0;
+            box-sizing: border-box;
+            width: 500%;
+            height: 100px;
+        }
+        .imgbox li{
+            float: left;
+            box-sizing: border-box;
+            width: 700px;
+            height: 45px;
+            list-style: none;
+        }
+        .imgbox li a{
+            box-sizing: border-box;
+            display: inline-block;
+            width: 700px;
+            height: 450px;
+            background-color: rgb(134, 152, 255);
+        }
+        .imgbox li a img{
+            cursor:auto;
+            width: 700px;
+            height: 450px;
+        }
+        .circlebox{
+            position: absolute;
+            bottom: 0;
+            width: 700px;
+            height: 40px;
+            background-color: rgba(94, 94, 94, 0.486);
+ 
+        }
+        .circle {
+            position: absolute;
+            bottom: 10px;
+            left: 300px;
+        }
+        .circle li {
+            float: left;
+            width: 7px;
+            height: 7px;
+            list-style: none;
+            border: 2px solid rgb(93, 244, 255);
+            border-radius:100%;
+            margin: 3px;
+            cursor: pointer;
+            background-color: rgb(93, 244, 255);
+        }
+        .circlecolor{
+            background-color: coral !important;
+            border: 2px solid coral !important;
+        }
+    </style>
+    <script src="E:\114514\code\test\web\templates\1.js"></script>
+    <script src="E:\114514\code\test\web\templates\2.js"></script>
+</head>
+<body>
+    <div class="windows">
+        <div class="leftbtn"> < </div>
+        <div class="rightbtn"> > </div>
+        <ul class="imgbox">
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\1.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\2.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\3.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\4.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\5.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\6.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+        </ul>
+        <div class="circlebox">
+               <ol class="circle"></ol>
+        </div>
+      
+     
+       
+    </div>
+</body>
+</html>

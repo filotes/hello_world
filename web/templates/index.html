@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航网页</title>
+<style>
+*{
+margin: 0;
+padding: 0;
+}
+.windows{
+position: relative;
+border: 3px rgb(255, 188, 44) solid;
+width: 700px;
+height: 400px;
+background-color: rgb(250, 186, 186);
+margin: 0px auto;
+overflow: hidden;
+float: left;
+}
+.leftbtn{
+z-index: 999;
+ position: absolute;
+ box-sizing: border-box;
+ top: 195px;
+ left: 0;
+ width: 50px;
+ height: 70px;
+ background-color: rgba(136, 135, 135, 0.582);
+ line-height: 70px;
+ text-align: center;
+ font-size: 35px;
+ color: rgba(255, 255, 255, 0.609);
+ cursor: pointer;
+ display: none;
+}
+.leftbtn:hover{
+background-color: rgba(189, 186, 186, 0.623);
+color: aliceblue;
+}
+.rightbtn{
+z-index: 999;
+ position: absolute;
+ box-sizing: border-box;
+ top: 195px;
+ right: 0;
+ width: 50px;
+ height: 70px;
+ background-color: rgba(136, 135, 135, 0.609);
+ line-height: 70px;
+ text-align: center;
+ font-size: 35px;
+ color: rgba(255, 255, 255, 0.596);
+ cursor: pointer;
+ display: none;
+}
+.rightbtn:hover{
+background-color: rgba(80, 252, 186, 0.623);
+color: aliceblue;
+}
+.imgbox{
+position:absolute;
+left: 0;
+top: 0;
+box-sizing: border-box;
+width: 500%;
+height: 100px;
+}
+.imgbox li{
+float: left;
+box-sizing: border-box;
+width: 700px;
+height: 45px;
+list-style: none;
+}
+.imgbox li a{
+box-sizing: border-box;
+display: inline-block;
+width: 700px;
+height: 450px;
+background-color: rgb(134, 152, 255);
+}
+.imgbox li a img{
+cursor:auto;
+width: 700px;
+height: 450px;
+}
+.circlebox{
+position: absolute;
+bottom: 0;
+width: 700px;
+height: 40px;
+background-color: rgba(94, 94, 94, 0.486);
+ }
+.circle {
+position: absolute;
+bottom: 10px;
+left: 300px;
+}
+.circle li {
+float: left;
+width: 7px;
+height: 7px;
+list-style: none;
+border: 2px solid rgb(93, 244, 255);
+border-radius:100%;
+margin: 3px;
+cursor: pointer;
+background-color: rgb(93, 244, 255);
+}
+.circlecolor{
+background-color: coral !important;
+border: 2px solid coral !important;
+}
+.box1{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.dh1{
+    width:
+    1000px; 
+    height: 30px; 
+    text-align: center; 
+    background-color: rgb(12, 104, 241);
+}
+.dh2{
+    width: 100px; height: 
+    30px; float: left; 
+    margin-left: 180px;
+}
+.dh3{
+    width: 100px; 
+    height: 30px; 
+    float: left; 
+    margin-left: 5px; 
+    margin-right: 5px;
+}
+.dh4{
+    width: 100px; 
+    height: 30px; 
+    float: left;
+}
+.dh5{
+    width: 100px; 
+    height: 30px; 
+    float: left; 
+    margin-left: 5px; 
+    margin-right: 5px;
+}
+.dh6{
+    width: 100px; 
+    height: 30px; 
+    float: left;
+}
+.dh7{
+    width: 100px; 
+    height: 30px; 
+    float: left; 
+    margin-left:5px; 
+    margin-right: 180px;
+}
+#a{
+    width: 1000px; 
+    height: 80px;
+}
+a{
+    font-size: 24px; 
+    text-decoration: none; 
+    color: #00EE76;
+}
+.a{
+    font-size: 24px; 
+    text-decoration: none; 
+    color: rgb(255, 255, 255);
+}
+li{
+    color: aqua;
+}
+#ikun1{
+    width: 25%; 
+    height: 408px;
+    margin-left: 50px;
+    float: left;
+    background-color: #FF69B4;
+}
+
+.right{
+    width: 27%;
+    height: 406px;
+    float: left;
+    background-color: #00EE76
+}
+/*
+.gradient-color {
+  background-image: linear-gradient(to right, rgb(58, 233, 58) rgb(54, 240, 240));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+*/
+    </style>
+
+<script src="E:\114514\code\test\web\templates\1.js"></script>
+<script src="E:\114514\code\test\web\templates\2.js"></script>
+
+</head>
+
+<body>
+    <div class="box1">
+        <div id="a">
+            <img src="E:\114514\code\test\web\templates\dh.png" width="1000px" height="80px">
+        </div>
+        <div class="dh1">
+            <div class="dh2">
+                <a href="#" class="a">首页</a>
+            </div>
+            <div class="dh3">
+                <a href="#" class="a">下载</a>
+            </div>
+            <div class="dh4">
+                 <a href="#" class="a">软件</a>
+            </div>
+            <div class="dh5">
+                  <a href="#" class="a">视频</a>
+            </div>
+            <div class="dh6">
+                <a href="E:\114514\code\test\web\templates\Music_yinyueguan.html" class="a">音乐</a>
+            </div>
+            <div class="dh7">
+            <a href="https://www.baidu.com" class="a">百度</a>
+            </div>
+        </div>
+    </div>
+        
+            <div id="ikun1">
+                <ul>
+                    <li>
+                        <a href="https://ys.mihoyo.com/">Genshin Impact</a>
+                    </li>
+                    <li>
+                        <a href="https://bh3.mihoyo.com/ad/?media_from=baidu">Honkai Impact 3rd</a>
+                    </li>
+                    <li>
+                        <a href="https://sr.mihoyo.com/ad?from_channel=adbdpz&utm_source=mkt&utm_medium=branding&utm_campaign=583087">Honkai Star Rail</a>
+                    </li>
+                    <li>
+                        <a href="https://zzz.mihoyo.com/?utm_source=pcadbdsem001">Absolute zero</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mihoyo.com/">MiHoYo</a>
+                    </li>
+                </ul>
+            </div>
+
+        
+   
+
+
+<div class="windows">
+    <div class="leftbtn"> < </div>
+    <div class="rightbtn"> > </div>
+        <ul class="imgbox">
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\1.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\2.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\3.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\4.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="E:\114514\code\test\web\templates\5.bmp" alt="轮播图" class="lunboimg"></a>
+            </li>
+        </ul>
+        <div class="circlebox">
+               <ol class="circle"></ol>
+        </div>
+</div>
+
+<div class="right">
+
+</div>
+</body>
+</html>
