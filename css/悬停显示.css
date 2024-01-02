@@ -1,0 +1,21 @@
+/* 
+ul{
+list-style: none;
+}
+*/
+#list li{
+float: left;
+width: 100px;
+text-align: center;
+}
+
+.list2 li{
+clear: both;
+margin-left: -40px;
+display: none;
+margin-top: 10px;
+}
+
+#list li:hover .list2 li{
+display: block;
+}

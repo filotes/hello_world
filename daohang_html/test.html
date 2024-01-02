@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* 设置轮播容器的宽度和高度 */
+      .slideshow {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* 设置图片样式 */
+      .slideshow img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      /* 设置小圆点容器样式 */
+      .slideshow-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+
+      /* 设置小圆点样式 */
+      .slideshow-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+
+      /* 设置当前小圆点样式 */
+      .slideshow-dot.active {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow">
+      <!-- 图片列表 -->
+      <img src="E:\code_web\web\pictures\GS1.png" alt="Image 1" />
+      <img src="E:\code_web\web\pictures\GS2.png" alt="Image 2" />
+      <img src="E:\code_web\web\pictures\GS3.png" alt="Image 3" />
+    </div>
+
+    <div class="slideshow-dots">
+      <!-- 小圆点列表 -->
+      <div class="slideshow-dot"></div>
+      <div class="slideshow-dot"></div>
+      <div class="slideshow-dot"></div>
+    </div>
+
+    <script>
+      // 获取轮播容器
+      var slideshow = document.querySelector(".slideshow");
+      // 获取图片列表和小圆点列表
+      var images = slideshow.querySelectorAll("img");
+      var dots = document.querySelectorAll(".slideshow-dot");
+      // 设置初始索引
+      var currentIndex = 0;
+
+      // 切换至指定索引的图片和小圆点
+      function showImage(index) {
+        // 隐藏当前显示的图片和小圆点
+        images[currentIndex].style.opacity = 0;
+        dots[currentIndex].classList.remove("active");
+        // 显示指定索引的图片和小圆点
+        images[index].style.opacity = 1;
+        dots[index].classList.add("active");
+        // 更新当前索引
+        currentIndex = index;
+      }
+
+      // 切换至下一张图
+      function nextImage() {
+        var nextIndex = (currentIndex + 1) % images.length;
+        showImage(nextIndex);
+      }
+
+      // 绑定小圆点的点击事件
+      dots.forEach(function (dot, index) {
+        dot.addEventListener("click", function () {
+          showImage(index);
+        });
+      });
+
+      // 设置定时器，每隔 3 秒切换一张图
+      setInterval(nextImage, 3000);
+    </script>
+  </body>
+</html>
